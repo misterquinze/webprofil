@@ -26,7 +26,7 @@ body{
 }
 
 header{
-    background-color: red;
+    background-color: black;
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -36,13 +36,14 @@ header{
 
 .logo{
     max-width: 44px;
+    min-width: 44px;
     margin-top: 10px;
 }
 
 /*Navigation Bar*/
 #topnav {
-    background-color:red;
-    border: 1px solid rgba(240, 37, 37, 0.2);
+    background-color:black;
+    border: 1px solid rgba(8, 1, 1, 0.2);
     padding-bottom: 5px;
     font-size: 18px;
     color: white;
@@ -69,7 +70,6 @@ header{
 .link {
     text-decoration: none;
     color: white;
-    
 }
 
 .link:hover{
@@ -86,7 +86,8 @@ header{
     align-items: center;
     top: 0;
     left: 0;
-    margin-left: 30px
+    margin-left: 30px;
+    margin-top: 10px;
 }
 
 /*Content*/
@@ -212,63 +213,41 @@ footer{
 }
 
 
-
 @media screen and (min-width: 768px) {
     /*Navigation Bar*/
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-       
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
     }
-    
-    .main-nav {
-        display: flex;
-        margin-right: 20px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-    
-    .main-nav li{
-        margin: 0;
-    }
-    
-    .links{
-        margin-left: 30px;
-    }
-    
+
     .logo{
-        margin-top: 0;
-        padding: 10px;
+        grid-column: 2/3;
+        margin-top: 10px;
     }
-    
-    .logo .logo-img{
-        max-width: 50px;
-        float: left;
-       
+
+    #topnav{
+        position: relative;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        transform: translate(0, 0);
     }
-    
+
+    #topnav #menu-bar {
+        display: flex;
+    }
+
+    #topnav .link {
+        
+        margin-left: 3em;
+        margin-bottom: 0;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
     .navbar-toggle{
         display: none;
-    }
-    
-    .navbar .main-nav .link{
-        
-        padding-top: 20px;
-        margin-right: 10px;
-        text-decoration: none; 
-        text-transform: uppercase;   
-        position: relative;
-        font-size: 16px;
-        font-weight: 400;
-        color: white;
-        float: right;
-    }
-    
-    .navbar .main-nav .link:hover{
-        color: #cccccc;
-        
     }
     
     /*Main Content*/
