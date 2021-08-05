@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <meta 
     name="description" 
-    content="Portofolio Web Page of Achmad Natsir>
+    content="Portofolio Web Page of Achmad Natsir">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/logo-favicon.png">
+    <meta name="theme-color" content="#db0000">
+    <link rel="apple-touch-icon" href="/icons/icon-N-192px.png">
+    <link rel="icon" href="N-favicon.png">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Natsir Web Profile</title>
 </head>
 <body>
-    <link rel="stylesheet" href="assets/style.css">
-    <header>
-        <img src="assets/img/logo-2.png" alt="logo" class="logo">
+    <header class="app-bar">
+        <a href="#mainContent" class="skip-link">Menuju ke konten</a>
+        <div class="app-bar__menu">
+            <button aria-label="Open main-menu" id="hamburgerButton">☰</button>
+        </div>
+        <div class="app-bar__brand">
+            <h1>Natsir</h1>
+        </div>
+        <nav id="navigationDrawer" class="app-bar__navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="https://www.linkedin.com/in/achmad-alghifari-72b8a7aa/">About</a></li>
+            </ul>
+        </nav>
+        <!-- <img src="assets/img/logo-2.png" alt="logo" class="logo">
         <a href="#" class="navbar-toggle" id="navbar-toggle-menu">☰</a>
         <nav class="navbar" id="topnav">
             <ul class="main-nav" id="menu-bar">
                 <li><a href="#About" class="link">About</a></li>
                 <li><a href="#Experience" class="link">Experience</a></li>
-                <!-- <li><a href="#Skill" class="link">Skill</a></li> -->
+                <li><a href="#Skill" class="link">Skill</a></li> 
                 <li><a href="#Contact" class="link">Contact</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
-    <div class="jumbotron">
-        <img src="assets/img/banner.png" alt="natsir" class="jumbo-img">
+    <div class="hero">
+        <div class="hero-box">
+            <img src="assets/img/banner.png" alt="natsir" class="jumbo-img">
+        </div>
     </div>
     <main id="mainContent">
         <!-- <div class="content">
@@ -156,7 +174,7 @@
     <footer>
         Achmad Natsir Alghifari &#169; 2021
     </footer>
-   <script type="text/javascript" src="assets/profil.js"></script>
+   
  
 </body>
 
