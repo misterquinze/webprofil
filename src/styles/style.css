@@ -7,7 +7,6 @@
     padding: 0;
 }
 
-
 body, html {
     margin: 0;
     padding: 0;
@@ -25,14 +24,91 @@ body{
     font-weight: 300;
 }
 
-header{
-    background-color: black;
-    text-align: center;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    padding: 10px
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
 }
+
+.skip-link:focus {
+    top: 0;
+}
+
+/*
+ * App-Bar
+ */
+ .app-bar {
+    padding: 8px 16px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+  
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+}
+     
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    min-width: 44px;
+    min-height: 44px;
+}
+     
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+     
+  .app-bar .app-bar__brand h1 {
+    color: white;
+    text-shadow: 1px 1px rgb(201, 86, 86);
+    font-size: 20px;
+    user-select: none;
+    font-family: 'Saira Stencil One', cursive;
+}
+     
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: red;
+    overflow: hidden;
+}
+     
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+}
+     
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    min-width: 44px;
+    min-height: 44px;
+}
+
 
 .logo{
     max-width: 44px;
@@ -41,7 +117,7 @@ header{
 }
 
 /*Navigation Bar*/
-#topnav {
+/* #topnav {
     background-color:black;
     border: 1px solid rgba(8, 1, 1, 0.2);
     padding-bottom: 5px;
@@ -88,7 +164,7 @@ header{
     left: 0;
     margin-left: 30px;
     margin-top: 10px;
-}
+} */
 
 /*Content*/
 .jumbotron{
@@ -102,13 +178,37 @@ header{
     object-position: 50% 50%;
 
 }
+/*
+ * Hero Element
+ */
+ .hero {
+    display: flex;
+    align-items: center;
+    min-height: 480px;
+    width: 100%;
+    text-align: center;
+    background-image: url("/images/banner.jpg");
+    background-position: center;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  .hero-box {
+    margin: 0 auto;
+    max-width: 800px;
+}
+  .hero-title {
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+}
 
 main{
     padding: 20px;
     overflow: auto;
 }
 
-.content {
+/* .content {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -203,7 +303,7 @@ main{
     font-size: 22px;
     color: black;
     margin: 24px 0;
-}
+} */
 
 footer{
     background: black;
@@ -215,7 +315,7 @@ footer{
 
 @media screen and (min-width: 768px) {
     /*Navigation Bar*/
-    header{
+    /* header{
         display: grid;
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
     }
@@ -250,7 +350,7 @@ footer{
         display: none;
     }
     
-    /*Main Content*/
+    
     .jumbotron{
         margin: 0 auto;
     }
@@ -297,13 +397,13 @@ footer{
         clear: left;
     }
 
-    /*Aside*/
+    
     .profil-img {
         width: 100%;
         max-height: 300px;
         object-fit: cover;
         object-position: center;
-    }
+    } */
     
     footer {
         padding: 20px;
