@@ -312,103 +312,89 @@ footer{
     padding: 20px;
 }
 
-
-@media screen and (min-width: 768px) {
-    /*Navigation Bar*/
-    /* header{
-        display: grid;
-        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+@media screen and (min-width: 650px) {
+    .hero {
+      display: flex;
+      align-items: center;
+      min-height: 500px;
+      width: 100%;
+      text-align: center;
+      background-image: url("/images/banner.jpg");
+      background-position: center;
+      background-color: white;
+      background-size: cover;
     }
-
-    .logo{
-        grid-column: 2/3;
-        margin-top: 10px;
+    .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
     }
-
-    #topnav{
-        position: relative;
-        grid-column: 3 / 4;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        transform: translate(0, 0);
+    .app-bar .app-bar__brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    #topnav #menu-bar {
-        display: flex;
+     
+    .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
     }
-
-    #topnav .link {
-        
-        margin-left: 3em;
-        margin-bottom: 0;
-        min-width: 44px;
-        min-height: 44px;
+     
+    .app-bar .app-bar__menu {
+      display: none;
     }
-
-    .navbar-toggle{
-        display: none;
+     
+    .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
     }
-    
-    
-    .jumbotron{
-        margin: 0 auto;
+     
+    .app-bar .app-bar__navigation ul li {
+      display: inline-block;
     }
-    
-    .jumbo-img {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-        object-position: 50% 50%;
-    
+     
+    .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 0;
+      min-width: 44px;
+      min-height: 44px;
     }
-    
-    main{
-        padding: 20px;
-        overflow: auto;
+     
+    .restaurants {
+      grid-template-columns: 1fr 1fr;
     }
-    
-    .content{
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
+     
+    .restaurant {
+      grid-template-columns: auto 1fr;
+      max-width: 100%;
     }
-    
-    .content .card{
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        padding: 20px;
-        margin-top: 20px;
+  
+  
+    .restaurant .restaurant__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
-    
-    .content .left{
-        margin-right: 20px;
+  
+    .restaurant .restaurant__review__form {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
-    
-    .content .left .card  p{
-        text-align: justify;
+     
+    .restaurant .restaurant__overview {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
-    
-    .content .right {
-        width: 50%;
-    }
-    
-    .clear {
-        clear: left;
-    }
-
-    
-    .profil-img {
-        width: 100%;
-        max-height: 300px;
-        object-fit: cover;
-        object-position: center;
-    } */
-    
     footer {
         padding: 20px;
         color: white;
         background-color: black;
     }
- }
+}
+     
+@media screen and (min-width: 800px) {
+    .app-bar .app-bar__brand h1 {
+      font-size: 2em;
+    }
+}
+
 
