@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
@@ -38,6 +39,14 @@ module.exports = {
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/public/'),
+          to: path.resolve(__dirname, 'dist/'),
+        },
+      ],
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
